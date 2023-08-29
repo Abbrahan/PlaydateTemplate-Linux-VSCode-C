@@ -1,0 +1,31 @@
+// .vscode/tasks.json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Playdate: CMake Build",
+            "type": "shell",
+            "command": "cmake -S \"${workspaceFolder}\" -B \"${workspaceFolder}/build\""
+        },
+        {
+            "label": "Playdate: Make Build",
+            "type": "shell",
+            "command": "make --directory=\"${workspaceFolder}/build\""
+        },
+        {
+            "label": "Playdate: Run",
+            "type": "shell",
+            "command": "$PLAYDATE_SDK_PATH/bin/PlaydateSimulator \"C_Template.pdx\""
+        },
+        {
+            "label": "Playdate: Build and Run",
+            "dependsOn": ["Playdate: CMake Build", "Playdate: Make Build", "Playdate: Run"],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
