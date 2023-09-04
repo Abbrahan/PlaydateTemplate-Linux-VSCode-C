@@ -21,7 +21,9 @@ There are multiple places where your program name will need to be entered after 
 
     `"command": "$PLAYDATE_SDK_PATH/bin/PlaydateSimulator \"C_Template.pdx\""`
 
-4. Once that's completed, you can now specify the active Kit for CMake to use by selecting your installed version of gcc. This will run CMake quickly which might complain about folder structure differences if you selected the active Kit before completing the prior steps. So if you run into this issue you will need to revert back to a clean copy of the template and start again.
+4. (Recommended) Update the pdxinfo file inside the Source folder to your project information.
+
+5. Once that's completed, you can now specify the active Kit for CMake to use by selecting your installed version of gcc. This will run CMake quickly which might complain about folder structure differences if you selected the active Kit before completing the prior steps. So if you run into this issue you will need to revert back to a clean copy of the template and start again.
 
 
 ## Building and Running in Playdate Simulator:
